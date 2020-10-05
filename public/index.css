@@ -1,0 +1,245 @@
+:root{
+    --base: #00b3ff;
+    --spacing:0;
+    --blur:10px;
+    --radius:10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.controls{
+    color: white;
+    margin: 10px;
+}
+.container{
+    padding-top: 100px;
+}
+body{
+    background-color: #000;
+    font-family: cursive;
+}
+#searchbox{
+    width: 50%;
+    margin: auto;
+}
+#searchbox input,button{
+    width: 75%;
+    border: 2px solid white;
+    border-right: 0;
+    font-size: 18px;
+    padding: 12px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+#searchbox button{
+    width: 25%;
+    background: #eee;
+    color: black;
+    float: right;
+    border-left: 0px;
+}
+#searchbox button:hover{
+    opacity: .8;
+    color: rgb(167, 165, 165);
+}
+#searchbox input:hover{
+    opacity: .8;
+}
+/*--------------------text-------------------------*/
+h1{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    color: #111;
+    font-size: 5em;
+}
+h1 span {
+    
+    margin: 0;
+    padding: 0;
+    animation: animate 2s linear infinite;
+}
+h1 span:nth-child(1){
+    animation-delay: 0s;
+}
+h1 span:nth-child(2){
+    animation-delay: 0.25s;
+}
+h1 span:nth-child(3){
+    animation-delay: 0.5s;
+}
+h1 span:nth-child(4){
+    animation-delay: 0.75s;
+}
+h1 span:nth-child(5){
+    animation-delay: 1.25s;
+}
+h1 span:nth-child(6){
+    animation-delay: 1.5s;
+}
+h1 span:nth-child(7){
+    animation-delay: 1.75s;
+}
+h1 span:nth-child(8){
+    animation-delay: 2s;
+}
+h1 span:nth-child(9){
+    animation-delay: 2.25s;
+}
+h1 span:nth-child(10){
+    animation-delay: 2.5s;
+}
+@keyframes animate{
+    0%,100%{
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff,
+                    0 0 200px #00b3ff,
+                    0 0 300px #00b3ff,
+                    0 0 400px #00b3ff;
+                    
+    }
+    0%,95%{
+        color: #111;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+/*------------------end --text-------------------------*/
+
+/* .gallery{
+    position: relative;
+    width: 400px;
+    height: 225px;
+    display: flex;
+    background: #060c21;
+    margin: 80px; 
+} */
+
+/* .gallery:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+} */
+/* .gallery:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+} */
+/* .gallery:before,
+.gallery:after
+{
+    background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
+} */
+
+.gallery{
+    margin: 20px;
+    text-align: center;
+    margin-top: 100px;
+
+}
+.gallery img{
+    /* margin: 5px;
+    filter: blur(5px); */
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+.gallery img:hover{
+   
+    filter: contrast(200%);
+   
+}
+
+
+
+
+
+/* Scroll Mouse */
+/* 
+#scrollpath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    
+   
+}
+#preogressbar{
+    border-radius: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5px;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    animation: scoll 5s linear infinite;
+   
+}
+#preogressbar:before,
+#preogressbar:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(10px);
+    
+}
+#preogressbar:after{
+    filter: blur(30px);
+}
+#percent{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) rotateX(180deg) rotateY(180deg);
+    right: 15px;
+    color: crimson;
+    font-size: 2em;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+}
+@keyframes scoll{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+} */
+::-webkit-scrollbar{
+    width: 0;
+}
+/* END Scroll Mouse */
+
+
+.controls {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1;
+  }
